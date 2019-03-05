@@ -22,11 +22,11 @@ const capabilityMap = {
     }
 }
 
-class HomematicDevice extends Device {
+class MerossDevice extends Device {
 
     onInit() {
         super.onInit(capabilityMap);
     }
 }
 
-module.exports = HomematicDevice;
+module.exports = MerossDevice;
