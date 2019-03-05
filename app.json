@@ -56,7 +56,7 @@
         "en": "Meross mss425e"
       },
       "class": "socket",
-      "capabilities": [],
+      "capabilities": ["onoff"],
       "images": {
         "large": "/drivers/sensor/assets/images/large.png",
         "small": "/drivers/sensor/assets/images/small.png"
