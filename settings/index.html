@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <!-- The '/homey.js' script must be included in your settings view to work -->
+  <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
+
+</head>
+
+<body>
+
+  <h1 data-i18n="settings.title">
+    <!--
+            This field will automatically be filled by a translated string with key 'settings.title'.
+            Read more about translations at Internationalization.
+            -->
+  </h1>
+  <p data-i18n="settings.subtitle">
+    <!--
+            This field will also be translated
+            -->
+  </p>
+
+  <fieldset>
+    <legend>Meross Cloud Settings</legend>
+
+    <div class="field row">
+      <label for="meross_email">E-Mail</label>
+      <input id="meross_email" type="text" value="" />
+    </div>
+    <div class="field row">
+      <label for="meross_password">Password</label>
+      <input id="meross_password" type="text" value="" />
+    </div>
+
+  </fieldset>
+
+  <button id="save" class="right">Save changes</button>
+
+  <script type="text/javascript">
+
+    // a method named 'onHomeyReady' must be present in your code
+    function onHomeyReady(Homey) {
+
+
+
+      var merossEmailElement = document.getElementById('meross_email');
+      var merossPasswordElement = document.getElementById('meross_password');
+
+      var saveElement = document.getElementById('save');
+
+      Homey.get('meross_email', function (err, meross_email) {
+        if (err) return Homey.alert(err);
+        merossEmailElement.value = meross_email;
+      });
+      Homey.get('meross_password', function (err, meross_password) {
+        if (err) return Homey.alert(err);
+        merossPasswordElement.value = meross_password;
+      });
+
+      saveElement.addEventListener('click', function (e) {
+
+        Homey.set('meross_email', merossEmailElement.value, function (err) {
+          if (err) return Homey.alert(err);
+        });
+        Homey.set('meross_password', merossPasswordElement.value, function (err) {
+          if (err) return Homey.alert(err);
+        });
+
+      });
+      // Tell Homey we're ready to be displayed
+      Homey.ready();
+    }
+  </script>
+
+</body>
+
+</html>

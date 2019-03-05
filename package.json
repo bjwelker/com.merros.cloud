@@ -1,0 +1,21 @@
+{
+  "name": "com.merros.cloud",
+  "version": "1.0.0",
+  "description": "Connect Merros Cloud with Homey",
+  "main": "app.js",
+  "dependencies": {
+    "mqtt": "^2.17.0",
+    "promise-fifo": "^1.0.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bjwelker/com.meross.cloud/issues"
+  },
+  "homepage": "https://github.com/bjwelker/com.merros.cloud#readme"
+}

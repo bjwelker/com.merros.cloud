@@ -1,0 +1,88 @@
+{
+  "id": "com.meross.cloud",
+  "version": "1.0.0",
+  "compatibility": ">=1.5.0",
+  "sdk": 2,
+  "name": {
+    "en": "Meross Cloud"
+  },
+  "description": {
+    "en": "Connect Meross Cloud with Homey"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Bjoern Welker",
+    "email": "bwelker@gmail.com"
+  },
+  "drivers": [
+    {
+      "id": "mss310",
+      "name": {
+        "en": "Meross mss310"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "mss425e",
+      "name": {
+        "en": "Meross mss425e"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    }
+  ],
+  "flow": {
+    "triggers": [
+    ]
+  },
+  "capabilities": {
+    }
+}
