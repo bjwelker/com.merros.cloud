@@ -4,9 +4,10 @@
   "description": "Connect Merros Cloud with Homey",
   "main": "app.js",
   "dependencies": {
-    "mqtt": "^2.17.0",
+    "mqtt": "^4.2.6",
     "promise-fifo": "^1.0.0",
-    "request": "^2.88.0"
+    "request": "^2.88.2",
+    "uuid": "^8.3.1"
   },
   "devDependencies": {},
   "scripts": {

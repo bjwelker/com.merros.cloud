@@ -9,4 +9,5 @@ Devices can be connected and switch on off
 
 The following devices are currently implemented:
 * mss310
-* mss425e work in progress
+* mss210
+* mss425e work in progress (broken)
